@@ -8,18 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController , UITableViewDataSource, UITableViewDelegate
+{
+    @IBOutlet weak var myTableView: UITableView!
+    var colleges: [College] = []
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return colleges.count
     }
-
-
+   
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let tableViewCell = tableView.dequeueReusableCellWithIdentifier("myCell", forIndexPath: indexPath)
+        tableViewCell.textLabel?.text = colleges[indexPath.row]
+        return tableViewCell
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete {
+            colleges.removeAtIndex(indexPath.row)
+            tableView.reloadData()
+        }
+    }
+    
 }
 
