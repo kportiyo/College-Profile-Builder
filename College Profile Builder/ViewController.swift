@@ -23,7 +23,7 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         
         colleges.append(College(Name: "UIC", Location: "Chicago, Illinois", NumberOfStudents: 29000, Image: UIImage(named: "Default")!))
           colleges.append(College(Name: "U of I", Location: "Champaign, Illinois", NumberOfStudents: 44087, Image: UIImage(named: "UofI")!))
-          colleges.append(College(Name: "University of Wisconsin-Madison", Location: "Madison, Wisconsin", NumberOfStudents: 43193, Image: UIImage(named: "wisconsinMadison")!))
+          colleges.append(College(Name: "University of Wisconsin-Madison!", Location: "Madison, Wisconsin", NumberOfStudents: 43193, Image: UIImage(named: "wisconsinMadison")!))
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
