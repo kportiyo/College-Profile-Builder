@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lS6-CS-p3k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lS6-CS-p3k">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="-403"/>
+            <point key="canvasLocation" x="1250" y="-442"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="8of-JB-FaV">
@@ -103,34 +103,55 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGn-vS-Ger">
-                                <rect key="frame" x="53" y="223" width="147" height="30"/>
+                                <rect key="frame" x="53" y="262" width="147" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3w9-wM-e7w">
-                                <rect key="frame" x="53" y="266" width="147" height="30"/>
+                                <rect key="frame" x="53" y="305" width="147" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of students" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mhS-Cy-mJt">
-                                <rect key="frame" x="53" y="310" width="147" height="30"/>
+                                <rect key="frame" x="53" y="353" width="147" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llz-Po-1Cq">
-                                <rect key="frame" x="103" y="357" width="46" height="30"/>
+                                <rect key="frame" x="103" y="391" width="46" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="5af-kt-gOY" eventType="touchUpInside" id="bSX-Dl-qW0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEC-Rz-4Rm">
+                                <rect key="frame" x="141" y="513" width="71" height="30"/>
+                                <state key="normal" title="Go to site!"/>
+                                <connections>
+                                    <action selector="websiteButtonTapped:" destination="5af-kt-gOY" eventType="touchUpInside" id="yj0-x4-iDT"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bal-Tf-zFg">
+                                <rect key="frame" x="103" y="464" width="147" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n92-e6-nT9">
+                                <rect key="frame" x="136" y="216" width="110" height="30"/>
+                                <state key="normal" title="Change image!"/>
+                                <connections>
+                                    <action selector="changeImageButtonTapped:" destination="5af-kt-gOY" eventType="touchUpInside" id="6sl-a9-TA2"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mhS-Cy-mJt" firstAttribute="centerX" secondItem="ON7-fN-6eJ" secondAttribute="centerX" id="Jei-94-eKE"/>
+                            <constraint firstItem="cEC-Rz-4Rm" firstAttribute="centerX" secondItem="ON7-fN-6eJ" secondAttribute="centerX" id="LCA-XQ-EWs"/>
                             <constraint firstItem="zGn-vS-Ger" firstAttribute="centerX" secondItem="ON7-fN-6eJ" secondAttribute="centerX" id="PhW-SM-zmO"/>
                             <constraint firstItem="Llz-Po-1Cq" firstAttribute="centerX" secondItem="ON7-fN-6eJ" secondAttribute="centerX" id="RhY-vg-ec9"/>
                             <constraint firstItem="3w9-wM-e7w" firstAttribute="centerX" secondItem="ON7-fN-6eJ" secondAttribute="centerX" id="WeQ-ch-ssU"/>
+                            <constraint firstItem="bal-Tf-zFg" firstAttribute="centerX" secondItem="ON7-fN-6eJ" secondAttribute="centerX" id="fmG-p1-IWB"/>
                             <constraint firstItem="oDa-Wd-gHd" firstAttribute="centerX" secondItem="ON7-fN-6eJ" secondAttribute="centerX" id="yeh-3v-3z5"/>
                         </constraints>
                     </view>
@@ -139,6 +160,7 @@
                         <outlet property="myImageView" destination="oDa-Wd-gHd" id="eqz-PF-iGX"/>
                         <outlet property="nameTextField" destination="zGn-vS-Ger" id="6wA-Jw-Wmu"/>
                         <outlet property="numberTextField" destination="mhS-Cy-mJt" id="UkV-ci-a4C"/>
+                        <outlet property="websiteTextField" destination="bal-Tf-zFg" id="od8-Qk-gnN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWT-xT-UKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -161,7 +183,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSQ-Mj-3Cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="534" y="-403"/>
+            <point key="canvasLocation" x="574" y="-442"/>
         </scene>
     </scenes>
 </document>

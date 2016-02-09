@@ -21,9 +21,9 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         myTableView.dataSource = self
         myTableView.delegate = self
         
-        colleges.append(College(Name: "UIC", Location: "Chicago, Illinois", NumberOfStudents: 29000, Image: UIImage(named: "Default")!))
-          colleges.append(College(Name: "U of I", Location: "Champaign, Illinois", NumberOfStudents: 44087, Image: UIImage(named: "UofI")!))
-          colleges.append(College(Name: "University of Wisconsin-Madison!", Location: "Madison, Wisconsin", NumberOfStudents: 43193, Image: UIImage(named: "wisconsinMadison")!))
+        colleges.append(College(Name: "UIC", Location: "Chicago, Illinois",  NumberOfStudents: 29000, Webpage: "www.uic.edu/", Image: UIImage(named: "Default")!))
+        colleges.append(College(Name: "U of I", Location: "Champaign, Illinois", NumberOfStudents: 44087, Webpage: "illinois.edu/", Image: UIImage(named: "UofI")!))
+        colleges.append(College(Name: "University of Wisconsin-Madison!", Location: "Madison, Wisconsin", NumberOfStudents: 43193, Webpage: "wisc.edu/", Image: UIImage(named: "wisconsinMadison")!))
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
@@ -83,10 +83,16 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
 
         myAlert.addAction(addAction)
         
-        myAlert.addTextFieldWithConfigurationHandler { (collegeTextField) -> Void in
-            collegeTextField.placeholder = "Add a college!"
+        myAlert.addTextFieldWithConfigurationHandler { (nameTextField) -> Void in
+            nameTextField.placeholder = "Add a college!"
             
         }
+        
+        myAlert.addTextFieldWithConfigurationHandler { (websiteTextField) -> Void in
+            websiteTextField.placeholder = "Add a URL!"
+            
+        }
+
         
         myAlert.addTextFieldWithConfigurationHandler { (locationTextField) -> Void in
             locationTextField.placeholder = "Add location"
