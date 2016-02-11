@@ -143,6 +143,10 @@
                                     <action selector="changeImageButtonTapped:" destination="5af-kt-gOY" eventType="touchUpInside" id="6sl-a9-TA2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEd-lv-Nwv">
+                                <rect key="frame" x="423" y="324" width="133" height="30"/>
+                                <state key="normal" title="Go to my Map View"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -166,6 +170,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWT-xT-UKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1877" y="-442"/>
+        </scene>
+        <!--Map View-->
+        <scene sceneID="v0D-9d-FVu">
+            <objects>
+                <viewController id="OnJ-K4-BMj" customClass="MapView" customModule="College_Profile_Builder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sfg-Dp-NjK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jnh-uN-xJH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZHb-OM-KHG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4UQ-P2-Ae1">
+                                <rect key="frame" x="191" y="149" width="240" height="128"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZl-DH-zwD">
+                                <rect key="frame" x="252" y="344" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDU-0E-Ma3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2529" y="-442"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pDn-v2-KPW">

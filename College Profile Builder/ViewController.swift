@@ -77,7 +77,12 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         let addAction = UIAlertAction(title: "Add", style: .Default) { (addAction) -> Void in
             let nameTextField = myAlert.textFields! [0] as UITextField
             let locationTextField = myAlert.textFields! [1] as UITextField
-            self.colleges.append(College(Name: nameTextField.text!, Location: locationTextField.text!))
+            let websiteTextField = myAlert.textFields! [2] as UITextField
+            let numberTextField = myAlert.textFields! [3] as UITextField
+            
+
+            
+            self.colleges.append(College(Name: nameTextField.text!, Location: locationTextField.text!, NumberOfStudents: Int(numberTextField.text!)!, Webpage: websiteTextField.text!))
             self.myTableView.reloadData()
         }
 
@@ -89,15 +94,21 @@ class ViewController: UIViewController , UITableViewDataSource, UITableViewDeleg
         }
         
         myAlert.addTextFieldWithConfigurationHandler { (websiteTextField) -> Void in
-            websiteTextField.placeholder = "Add a URL!"
+            websiteTextField.placeholder = "Add location!"
             
         }
 
         
         myAlert.addTextFieldWithConfigurationHandler { (locationTextField) -> Void in
-            locationTextField.placeholder = "Add location"
+            locationTextField.placeholder = "Add URL!"
             
         }
+        
+        myAlert.addTextFieldWithConfigurationHandler { (numberTextField) -> Void in
+            numberTextField.placeholder = "Add # of students!"
+            
+        }
+
         self.presentViewController(myAlert, animated: true, completion: nil)
     }
     
